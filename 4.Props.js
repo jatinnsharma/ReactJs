@@ -19,6 +19,7 @@ const Props = () => {
         <button>Action</button>
       </Welcome>
       <Welcome name="Nurender" age="23" />
+      <ClassComponents name="Vishal" age="21"/>
     </div>
   );
 };
