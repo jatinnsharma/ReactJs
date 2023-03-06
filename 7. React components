@@ -1,0 +1,153 @@
+										React Components
+									---------------------
+- Component is a template used for building application.
+- Components are buildign-block for React application.
+- Every component comprises
+			a) Markup
+			b) Styles
+			c) Logic
+- Markup is designed using HTML.
+- Styles are defined using CSS,Bootstrap,Sass,Less,Material
+- JSX [JavaScript Extention is used for logic]
+							[JavaScript | TypeScript]
+
+- Components allows reusability and easy extensibility.
+- You can build custom components or you can use existing component provided by various 3rd parties.
+
+
+								Building a React Component
+							-------------------------------
+- React component is a function or class of JavaScript that returns markup,styles and configures functionality.
+
+- Component function or class are defined in a simple javaScript file                          "Component.js"
+
+		function Name()
+		{
+		}
+
+		class Name()
+		{
+		}
+
+- Component is function or class defined in a module.
+- In order to use function or class from module you have to mark it as
+"export" 
+
+	export function Name(){}
+	export class Name(){}
+
+- You can also configure "default export"
+
+		export default function Name(){}
+		export default class Name(){}
+
+- You have to import modules and components
+		
+		import {Name} from "Module"; 		// if it is not default
+		import Name from Module;				// if it is default
+
+- Every component must return markup.
+
+- Function component returns markup by using "return" keyword.
+
+	export function Name()
+	{
+		return("<markup></markup>")
+	}
+
+- Class component returns markup by using "render()"
+
+	export class Name()
+	{
+		render(){
+				<markup></markup>
+		}
+	}
+
+Setup Bootstrap for Application:
+1.Open Terminal
+2.Install following libraries
+
+			>npm install bootstrap --save
+			>npm install bootstrap-icons --save
+
+3. Go to Index.js and Imports relative css files.
+
+import '../node_modules/bootstrap/dist/css/bootstrap.css'
+import '../node_modules/bootstrap-icons/font/bootstrap-icons.css'
+
+
+Ex:Netflix Register
+
+1. Add a new folder into SRC
+		"components"
+2. Add a new file
+		"NeflixRegisterComponent.js"
+
+export function NeflixRegiserComponent(){
+    return (
+        <div className='container-fluid text-center mt-3 bg-dark p-3 text-white w-75'>
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+            <div className="input-group input-group-lg">
+                <input type="email " className="form-control"/>
+                <button className="btn btn-danger">
+                    Get Started
+                    <span className="bi bi chevron-right"></span>
+                </button>
+            </div>
+        </div>
+
+    )
+}
+
+3. Go to index.js
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import { NeflixRegiserComponent } from './components/NeflixRegiserComponent';
+import '../node_modules/bootstrap/dist/css/bootstrap.css'
+import '../node_modules/bootstrap-icons/font/bootstrap-icons.css'
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <NeflixRegiserComponent/>
+  </React.StrictMode>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
+
+
+
+
+JSX Rules: 
+1. You can't use attributes,only properties are allowed 
+
+			<div class="">    	invalid
+			<div className=""> 	valid
+
+2. Every element requires end tag or self ending 
+
+			<input> 					invalid
+			<input></input>			valid
+			<input/>					valid
+			<img/>						valid
+
+3. Component will not allow directly multiple lines of markup.
+	You need a container
+
+	<h2>Hello</h2>
+	<p>Welcome</p>				// invalid
+
+
+	<div>
+		<h2></h2>
+		<p></p>
+	</div>
+
+
