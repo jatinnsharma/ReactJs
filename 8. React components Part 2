@@ -1,0 +1,180 @@
+					React Components
+
+a) Presentation
+	 	HTML
+b) Styles
+		CSS
+c) Logic
+		JSX
+
+-Function Component
+
+JSX
+- Entier Markup must be in a container 
+	<div>					<>
+	</div>				</>
+
+									Multiple Components in Application
+
+
+1. NetflixHeaderComponenet.js
+
+export default function NetflixHeaderComponent() {
+  return (
+    <>
+      <div className="d-flex justify-content-between m-3 p-3">
+        <div>
+          <h2 className="text-danger">NETFLIX</h2>
+        </div>
+        <div className="input-group w-25">
+          <select className="form-select">
+            <option>Language</option>
+            <option>English</option>
+            <option>Hindi</option>
+          </select>
+          <button className="btn btn-danger m-2">Signin</button>
+        </div>
+      </div>
+    </>
+  );
+}
+
+2. NetflixFooterComponent.js
+export default function NetflixFooterComponent() {
+  return (
+    <>
+      Questions? Call 000-800-919-1694
+      <div className="row">
+        <div className="col">
+          <ul className="list-unstyled">
+            <li>FAQ </li>
+            <li>Investor Relations</li>
+            <li>Privacy</li>
+            <li>Speed Test</li>
+          </ul>
+        </div>
+        <div className="col">
+          <ul className="list-unstyled">
+            <li>FAQ </li>
+            <li>Investor Relations</li>
+            <li>Privacy</li>
+            <li>Speed Test</li>
+          </ul>
+        </div>
+        <div className="col">
+          <ul className="list-unstyled">
+            <li>FAQ </li>
+            <li>Investor Relations</li>
+            <li>Privacy</li>
+            <li>Speed Test</li>
+          </ul>
+        </div>
+        <div className="col">
+          <ul className="list-unstyled">
+            <li>FAQ </li>
+            <li>Investor Relations</li>
+            <li>Privacy</li>
+            <li>Speed Test</li>
+          </ul>
+        </div>
+      </div>
+    </>
+  );
+}
+
+
+
+3. NetflixMainComponent.js
+export default function NetflixMainComponent() {
+  return (
+    <>
+      <div className="text-center"> 
+        <h1>Unlimited movies,TV shows and more.</h1>
+        <h3>Watch anywhere. Cancel anytime.</h3>
+      </div>
+    </>
+  );
+}
+
+4. NetlixRegisterComponent.js
+export function NetflixRegisterComponent() {
+  return (
+    <div>
+      <p className="text-center">
+        Ready to watch? Enter your email to create or restart your membership.
+      </p>
+      <div className="input-group input-group-lg">
+        <input type="email " className="form-control" />
+        <button className="btn btn-danger">
+          Get Started
+          <span className="bi bi chevron-right"></span>
+        </button>
+      </div>
+    </div>
+  );
+}
+
+
+5. NetflixIndexComponent.js
+import "./NetflixIndexComponent.css";
+import NetflixHeaderComponent from "./NetflixHeaderComponent";
+import NetflixMainComponent from "./NetflixMainComponent";
+import { NetflixRegisterComponent } from "./NetflixRegisterComponent";
+import NetflixFooterComponent from "./NetflixFooterComponent";
+
+export default function NetflixIndexComponent() {
+  return (
+    <div className="container-fluid">
+      <div className="box">++
+        <header>
+          <NetflixHeaderComponent />
+        </header>
+        <section className="d-flex justify-content-center align-items-center ">
+          <main>
+            <NetflixMainComponent />
+            <NetflixRegisterComponent />
+          </main>
+        </section>
+        <foooter className="m-2 p-2">
+          <NetflixFooterComponent  />
+        </foooter>
+      </div>
+    </div>
+  );
+}
+
+
+6.5. NetflixIndexComponent.css
+.container-fluid{
+    background-image: url("netflix-poster.jpg");
+    background-size: contain;
+    height: 100vmax;
+    color:white;  
+}
+.box{
+    background-color: rgba(0, 0, 0, 0.6);
+    height:100vmax;
+    width: 100vmax;
+}
+
+section{
+    height: 400px;
+}
+
+
+Index.js 
+
+<React.StrictMode>
+	<NetflixIndexComponent/>
+</React.StrictMode>
+
+
+
+Ex: Arrow Technique | CallBack
+	<div>
+		<h2>User Login</h2>
+	</div>
+
+export default LoginComponent; 
+
+
