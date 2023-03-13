@@ -1,0 +1,134 @@
+FAQ: What are the difference between function and class component?
+
+Class Component
+- It represent a JavaScript class.
+- It is good for extensibility.
+- Component class comprises state.
+- It is known as Stateful component.
+- Life Cycle is configured for component.
+- It handles various phases from initialization to destroy.
+
+Function Component
+- It represents a JavaScript function.
+- It is not great in extensibility.
+- It uses less memory
+- It is faster 
+- It is state less [from 17+ versions you can use state]
+- Explicitly use state
+- No life cycle methods implicitly [ explicitly you can configure]
+
+
+FAQ: Which component you will design as class?
+Ans: The components that need regular extentions.
+
+
+									Data Binding
+- Data Binding is technique that defines how data is binded to UI.
+[View]
+- JavaScript and jQuery uses lot of DOM methods for Data Binding.
+				getElementBild()
+				getQuerySelector()
+                appendChild()
+                createElement()
+
+- React can handle data binding by using binding expression and simple collection methods.
+- React Data Binding Expression
+        "{}"
+- You can bind to a property or you can bind as literal 
+
+            <div> {literal} </div>
+            <img src="">
+Ex: 
+export default function DataBindingComponent(){
+	var product={
+			Name:'Samsung TV',
+			Price: 24242.342,
+			Stock: true
+	}
+	return(
+			<div>
+					<h2>Product Details</h2>
+					<dl>
+						<dt>Name</dt>
+                        <dd>{product.Name}</dd>
+                        <dt>Price</dt>
+                        <dd>{product.Price}</dd>
+                        <dt>Stock</dt>
+                        <dd>{(product.Stock==true)?"Available":"OUt of Stock"}</dd>
+                    </dl>
+			</div>
+		)
+}
+
+- You can't bind any dynamic value to attribute.
+
+        <div class ={}>    // invalid 
+        <div className={}>
+        <table height={}>  // invalid - table don't have height as property.
+
+This code for reading property of any tag
+     <script>
+        var table = document.createElement("table")
+        for(var property in table){
+            document.write(property + "<br>")
+        }
+     </script>
+
+
+- Binding a collection -Array
+        .map()
+        .filter()
+        .find()
+        .toString()
+        .join()
+        .slice()
+
+    Ex:
+        export default function DataBindingComponent(){
+        var categories=["All","Electronics","Footwear","fashion"]
+        return(
+        <div className="container" >
+            <h2>Categories</h2>
+            <ol>
+                {
+                    categories.map(category=>
+                    <li>{category}</li>
+                    )
+                }
+            </ol>
+            <h2>Select Category</h2>
+            <select>
+                {
+                    categories.map(category=>
+                    <option  value={category}>{category}</option>
+                    )
+                }
+            <select>
+        <div>
+        )
+    }
+
+- In React iterations every iterating item must have a unique key.
+export default function DataBindingComponent(){
+        var categories=["All","Electronics","Footwear","fashion"]
+        return(
+        <div className="container" >
+            <h2>Categories</h2>
+            <ol>
+                {
+                    categories.map(category=>
+                    <li key={category}>{category}</li>
+                    )
+                }
+            </ol>
+            <h2>Select Category</h2>
+            <select>
+                {
+                    categories.map(category=>
+                    <option key={category} value={category}>{category}</option>
+                    )
+                }
+            <select>
+        <div>
+        )
+    }
