@@ -8,7 +8,6 @@ user will stay at one page and get access to other pages.
 -Loosely coupled and Extensible.
 update the application without distrub the application without and failler 
 
-
 What is solution?
 -Better to build SPA(Single Page Application).
 
