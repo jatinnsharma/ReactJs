@@ -5,6 +5,7 @@ and their values have passed from the parent component
 so if you want to display the name that has been passed 
 so you need to use {props.name }
 Their value cannot be changed 
+
 */
 
 import React, { Component } from "react";
