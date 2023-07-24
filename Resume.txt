@@ -1,0 +1,66 @@
+Resume
+-------
+ * Bots - ATS friendly
+    Skills section in your Resume
+      Keywords - JS , React js , react native , css ,html ,frontend ,tailwindcss redux
+    Props headings
+ * Recruites
+    Skills 
+    College Graduation Year 
+    work Experience
+    Contact Information - 
+        Email id
+        Linkedln
+        phone number
+        Address no need
+        no photo
+
+ * 1:1 interviewers - tech + managers
+        Technical interviewers
+          Projects
+            React Project
+            Challenging Project
+          Good technical Keywords
+              I have an build app which is a high scalable video streaming platform,fast loading,performant,high optimize search , responsive design.
+              application page loading time in 100ms or in 200ms
+              light and dark color theme
+              implement cheche using redux store
+          Link along with each project 
+              Github link
+              Working Demo link  
+          Skills
+            redux
+            react js 
+            react native 
+            javaScript 
+            typeScript 
+            html/css
+            tailwindcss
+            firebase 
+            node js (Basic)
+
+            Managers
+                
+
+
+Extra stuff
+-Certifications
+-Achievements
+-Github links
+-Live Project Links 
+
+What you have to not do :
+- hobbies 
+- Address
+- DOB and Tob
+- Photos 
+- Random Achievements
+- Declaration
+- cannot write hardworking 
+
+
+right side - phone number , email , linkedln
+1st section - work Experience
+2nd section - project 
+3rd section - skill and college
+4th section - Certifications and Achievements
