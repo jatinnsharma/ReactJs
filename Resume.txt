@@ -64,3 +64,4 @@ right side - phone number , email , linkedln
 2nd section - project 
 3rd section - skill and college
 4th section - Certifications and Achievements
+
